@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int km, floor, price, weight;
+		int priceKm, priceFloor, pricePerKm, pricePerKgPerFloor;
+		double tip, totalPrice, tipPercentage;
+		
+		pricePerKm = (5);
+		pricePerKgPerFloor = (1);
+		tipPercentage = (0.1);		
+		
+		System.out.println("Please type the price of the product in NIS: ");
+		price = scanner.nextInt();
+			
+		System.out.println("Please type the weight of the product in Kg: ");
+		weight = scanner.nextInt();
+		
+		System.out.println("Please type how far you live from the store in Km: ");
+		km = scanner.nextInt();
+		
+		System.out.println("Please type your flat's floor: ");
+		floor = scanner.nextInt();
+						
+		priceKm = (pricePerKm*km);
+		priceFloor = (floor*weight*pricePerKgPerFloor);
+		tip = (tipPercentage*price);
+		totalPrice = (price+tip+priceFloor+priceKm);
+		
+		System.out.println("the total price is " + totalPrice + " NIS");
+			}
+
+	}
